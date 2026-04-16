@@ -1,35 +1,91 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+body {
+  background: #f8f6ff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.container {
+  width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: center;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+h1 {
+  margin-bottom: 20px;
+  color: #6c5ce7;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #f3f0ff;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #a29bfe;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #6c5ce7;
+}
+
+ul {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+li {
+  background: #f3f0ff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-btn {
+  background: #ffb3c1;
+}
+
+.delete-btn:hover {
+  background: #ff8fa3;
+}
+
+.error {
+  color: #ff6b81;
+  margin-top: 10px;
+}
+
+/* ✨ ANIMACIONES */
+.fade-enter-active, .fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.fade-enter-from {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
 }
